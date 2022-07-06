@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a7aa0e7fabd1d449b88ca321a1b990, type: 3}
+  m_Name: Mistery
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
+  prefab: {fileID: 2762041779660016694, guid: 5f54edd601c3d6f44b9649f2d6d02631, type: 3}
+  rowCount: 1
+  point: 100
+  type: 1

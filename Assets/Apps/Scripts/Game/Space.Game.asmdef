@@ -1,0 +1,16 @@
+{
+    "name": "Space.Game",
+    "rootNamespace": "",
+    "references": [
+        "GUID:66d3961da2c980743bad5ba150e55385"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
