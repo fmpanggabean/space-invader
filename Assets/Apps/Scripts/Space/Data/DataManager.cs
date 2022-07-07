@@ -27,6 +27,9 @@ namespace Space {
             bf.Serialize(file, data);
 
             file.Close();
+
+            Debug.Log("Data Saved!");
+            Debug.Log("highscore: " + data.highscore);
         }
         public void Load() {
             if (File.Exists(path)) {
@@ -37,6 +40,9 @@ namespace Space {
                 file.Close();
 
                 onDataLoaded?.Invoke(data);
+
+                Debug.Log("Data Loaded!");
+                Debug.Log("highscore: " + data.highscore);
             }
         }
     }

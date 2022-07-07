@@ -19,8 +19,6 @@ namespace Space.Game.UI {
         }
 
         private void Start() {
-            //set highscore
-            dataManager.Load();
             GetUI<ScoreUI>().SetHighScore(dataManager.data.highscore);
         }
 

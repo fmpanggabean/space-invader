@@ -21,6 +21,7 @@ namespace Space.Game {
         public bool isPlaying;
 
 
+
         private void Awake() {
             dataManager = FindObjectOfType<DataManager>();
 
@@ -45,7 +46,9 @@ namespace Space.Game {
         }
 
         private void SaveHighscore() {
-            dataManager.data.SetHighScore(score.highscore);
+            Debug.Log("Saving highscore ... ");
+            Debug.Log("highscore : " + score.highscore);
+            dataManager.data.SetHighScore(score.score1);
             dataManager.Save();
         }
 
