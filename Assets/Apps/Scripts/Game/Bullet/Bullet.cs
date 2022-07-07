@@ -5,10 +5,13 @@ using UnityEngine;
 
 namespace Space.Game {
     public class Bullet : Entity {
+        public int damage = 1;
+        
         private Movement movement;
 
         private float maxTravelDistance;
         private float travelDistance;
+        private Type type;
 
         private void Awake() {
             movement = GetComponent<Movement>();
@@ -23,17 +26,29 @@ namespace Space.Game {
         }
 
         private void OnTriggerEnter2D(Collider2D collision) {
-            Destroy(collision.gameObject);
-            Hide();
+            Entity collidedObject = collision.GetComponent<Entity>();
+
+            if (!IsSameType(collidedObject.GetType())) {
+                collidedObject.Damaged(damage);
+                Hide();
+            }
+        }
+
+        private bool IsSameType(Type _type) {
+            if (type == _type) {
+                return true;
+            }
+            return false;
         }
 
         public void Activate(Transform _transform, float _maxTravelDistance, Type _type) {
             Show();
-            travelDistance = 0;
+
+            type = _type;
             transform.position = _transform.position;
             transform.rotation = _transform.rotation;
             maxTravelDistance = _maxTravelDistance;
-            Debug.Log("Activate");
+            travelDistance = 0;
             movement.SetDirection(transform.up);
         }
 

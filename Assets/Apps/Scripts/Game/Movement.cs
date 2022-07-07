@@ -10,6 +10,9 @@ namespace Space.Game {
 
         private Vector3 direction;
         private float speed;
+        private Vector3 newPosition;
+
+        public event Action<Vector3> onPositionUpdate;
 
         private void Awake() {
             entity = GetComponent<Entity>();
@@ -17,18 +20,27 @@ namespace Space.Game {
 
         private void Start() {
             speed = entity.speed;
+            newPosition = transform.position;
         }
 
         protected void Update() {
-            transform.position = GetNextPosition();
+            onPositionUpdate?.Invoke(GetNextPosition());
+        }
+
+        private void PositionUpdate(Vector3 _newPosition) {
+            transform.position = _newPosition;
         }
 
         private void OnEnable() {
             entity.onSetDirection += SetDirection;
+            onPositionUpdate += entity.SetDeltaPosition;
+            onPositionUpdate += PositionUpdate;
         }
 
         private void OnDisable() {
             entity.onSetDirection -= SetDirection;
+            onPositionUpdate -= entity.SetDeltaPosition;
+            onPositionUpdate -= PositionUpdate;
         }
 
         private Vector3 GetNextPosition() {

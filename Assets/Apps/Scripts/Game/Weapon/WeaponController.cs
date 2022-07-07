@@ -9,18 +9,12 @@ namespace Space.Game {
         private Entity entity;
         private List<Weapon> weapons;
 
-        private void Awake() {
+        protected void Awake() {
             entity = GetComponent<Entity>();
             weapons = GetComponentsInChildren<Weapon>().ToList<Weapon>();
         }
 
-        private void Update() {
-            if (Input.GetKeyDown(KeyCode.Space)) {
-                Shoot();
-            }
-        }
-
-        private void Shoot() {
+        public void ShootAllWeapon() {
             foreach(Weapon w in weapons) {
                 w.Shoot(entity.GetType());
             }

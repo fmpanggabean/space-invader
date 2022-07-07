@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
   prefab: {fileID: 2762041779660016694, guid: 5f54edd601c3d6f44b9649f2d6d02631, type: 3}
-  rowCount: 1
+  rowCount: 0
   point: 100
   type: 1

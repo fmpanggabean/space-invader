@@ -12,6 +12,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2122084737069071586, guid: 79a2d17bd6c216a459edfc99c8bed15d, type: 3}
+      propertyPath: chance
+      value: 0.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122084737069071586, guid: 79a2d17bd6c216a459edfc99c8bed15d, type: 3}
       propertyPath: bulletDistance
       value: 30
       objectReference: {fileID: 0}

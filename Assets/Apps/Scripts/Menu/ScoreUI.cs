@@ -10,10 +10,11 @@ namespace Space.Menu {
         public TMP_Text score2;
         public TMP_Text highscore;
 
-        public void SetScore(int _score1, int _score2, int _highscore) {
-            score1.text = _score1.ToString();
-            score2.text = _score2.ToString();
-            highscore.text = _highscore.ToString();
+        public void SetHighScore(int _highscore) {
+            highscore.text = _highscore.ToString("0000");
+        }
+        public void SetScore1(int _score1) {
+            score1.text = _score1.ToString("0000");
         }
     } 
 }
