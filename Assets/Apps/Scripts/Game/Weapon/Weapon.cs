@@ -16,8 +16,8 @@ namespace SpaceInvader.Game {
             weaponController = GetComponentInParent<WeaponController>();
         }
 
-        public void Shoot(Type _type) {
-            bulletManager.Request(transform, bulletDistance, _type);
+        public void Shoot(Entity _entity) {
+            bulletManager.Request(transform, bulletDistance, _entity);
             //Debug.Log(transform.rotation.eulerAngles);
         }
     } 

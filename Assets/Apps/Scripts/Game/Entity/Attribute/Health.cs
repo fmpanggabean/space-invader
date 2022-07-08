@@ -1,4 +1,6 @@
-﻿namespace SpaceInvader.Game {
+﻿using System;
+
+namespace SpaceInvader.Game {
     public class Health : IAttribute<int> {
         public int value { get; set; }
 

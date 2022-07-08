@@ -9,6 +9,7 @@ namespace SpaceInvader.Game {
         //public int hp;
         public float speed;
         public Vector3 deltaPosition;
+        public List<Type> targets;
 
         public event Action<int> onDamaged;
         public event Action<Entity> onDead;

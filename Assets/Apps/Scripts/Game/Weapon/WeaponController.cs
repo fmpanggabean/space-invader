@@ -16,7 +16,7 @@ namespace SpaceInvader.Game {
 
         public void ShootAllWeapon() {
             foreach(Weapon w in weapons) {
-                w.Shoot(entity.GetType());
+                w.Shoot(entity);
             }
         }
     } 

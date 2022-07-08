@@ -20,10 +20,10 @@ namespace SpaceInvader.Game {
             }
         }
 
-        public void Request(Transform _transform, float _maxTravelDistance, Type _type) {
+        public void Request(Transform _transform, float _maxTravelDistance, Entity _entity) {
             foreach (Bullet b in collection) {
                 if (!b.IsActive()) {
-                    b.Activate(_transform, _maxTravelDistance, _type);
+                    b.Activate(_transform, _maxTravelDistance, _entity);
                     return;
                 }
             }

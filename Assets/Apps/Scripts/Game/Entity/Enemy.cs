@@ -8,6 +8,11 @@ namespace SpaceInvader.Game {
         private EnemyData enemyData;
 
 
+        private void Awake() {
+            targets = new List<Type>();
+            targets.Add(typeof(Player));
+            targets.Add(typeof(Barrier));
+        }
         private void OnEnable() {
             onDead += Destroy;
         }

@@ -11,6 +11,9 @@ namespace SpaceInvader.Game {
 
         private void Awake() {
             inputDirection = new Vector3();
+            targets = new List<Type>();
+
+            targets.Add(typeof(Enemy));
         }
 
         private void Update() {
