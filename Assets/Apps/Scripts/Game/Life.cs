@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Space.Game {
+namespace SpaceInvader.Game {
     public class Life {
         public int value;
 

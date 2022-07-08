@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace Space {
+namespace SpaceInvader {
     [Serializable]
     public class GameDataContainer {
         public int highscore;

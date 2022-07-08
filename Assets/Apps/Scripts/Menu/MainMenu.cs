@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Space.Menu {
+namespace SpaceInvader.Menu {
     public class MainMenu : BaseMenu {
         public Button playButton;
 

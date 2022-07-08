@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Space {
+namespace SpaceInvader {
     [Serializable]
     public class GameData {
         public int highscore;

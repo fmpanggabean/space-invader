@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Space;
+using SpaceInvader;
 
-namespace Space.Game {
+namespace SpaceInvader.Game {
     public class GameManager : MonoBehaviour, IManager {
         private DataManager dataManager;
 
@@ -27,6 +27,10 @@ namespace Space.Game {
 
             score = new Score(this);
             life = new Life(3);
+        }
+
+        internal void Win() {
+            SceneManager.LoadScene(1);
         }
 
         private void Start() {

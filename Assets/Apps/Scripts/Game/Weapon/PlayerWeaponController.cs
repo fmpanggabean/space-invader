@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Space.Game {
+namespace SpaceInvader.Game {
     public class PlayerWeaponController : WeaponController {
 
 

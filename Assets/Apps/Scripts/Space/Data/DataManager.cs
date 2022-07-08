@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System;
 
-namespace Space {
+namespace SpaceInvader {
     public class DataManager : MonoBehaviour, IManager {
         public GameData data;
         private string path;

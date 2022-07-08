@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Space.Game {
+namespace SpaceInvader.Game {
     public class Bullet : Entity {
         public int damage = 1;
         

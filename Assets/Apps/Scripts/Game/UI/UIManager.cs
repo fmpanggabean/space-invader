@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using System;
 
-namespace Space.Game.UI {
+namespace SpaceInvader.Game.UI {
     public class UIManager : MonoBehaviour, IManager {
         private GameManager gameManager;
         private DataManager dataManager;

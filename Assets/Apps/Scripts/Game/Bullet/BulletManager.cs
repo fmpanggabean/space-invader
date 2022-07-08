@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace Space.Game {
+namespace SpaceInvader.Game {
     public class BulletManager : MonoBehaviour {
         public GameObject prefab;
 

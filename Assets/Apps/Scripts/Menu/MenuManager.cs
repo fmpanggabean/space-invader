@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace Space.Menu {
+namespace SpaceInvader.Menu {
     public class MenuManager : MonoBehaviour, IManager {
         private DataManager dataManager;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Space.Menu {
+namespace SpaceInvader.Menu {
     public class RowScoreDataUI : MonoBehaviour {
         public Image sprite;
         public Text pointText;

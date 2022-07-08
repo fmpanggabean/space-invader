@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Space.Game {
+namespace SpaceInvader.Game {
     [Serializable]
     public class Score {
         private GameManager gameManager;

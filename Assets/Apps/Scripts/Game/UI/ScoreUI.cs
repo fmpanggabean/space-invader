@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 
-namespace Space.Game.UI {
+namespace SpaceInvader.Game.UI {
     public class ScoreUI : BaseUI {
         public TMP_Text scoreText;
         public TMP_Text highscoreText;

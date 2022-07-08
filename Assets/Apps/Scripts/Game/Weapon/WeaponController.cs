@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using System;
 
-namespace Space.Game {
+namespace SpaceInvader.Game {
     public class WeaponController : MonoBehaviour {
         private Entity entity;
         private List<Weapon> weapons;

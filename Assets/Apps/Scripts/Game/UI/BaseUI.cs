@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Space.Game.UI {
+namespace SpaceInvader.Game.UI {
     public abstract class BaseUI : MonoBehaviour {
         
         public void Hide() {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace Space.Game {
+namespace SpaceInvader.Game {
     
     public class Player : Entity {
         private Vector3 inputDirection;

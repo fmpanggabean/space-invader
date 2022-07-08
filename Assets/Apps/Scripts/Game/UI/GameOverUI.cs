@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
-namespace Space.Game.UI {
+namespace SpaceInvader.Game.UI {
     public class GameOverUI : BaseUI {
         public Button buttonQuit;
         public Button buttonRetry;

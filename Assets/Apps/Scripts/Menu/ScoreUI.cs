@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-namespace Space.Menu {
+namespace SpaceInvader.Menu {
     public class ScoreUI : BaseMenu {
         public TMP_Text score1;
         public TMP_Text score2;

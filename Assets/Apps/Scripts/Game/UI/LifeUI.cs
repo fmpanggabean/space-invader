@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-namespace Space.Game.UI {
+namespace SpaceInvader.Game.UI {
     public class LifeUI : BaseUI {
         public TMP_Text lifeText;
         public List<Image> images;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Space.Game {
+namespace SpaceInvader.Game {
     [Serializable]
     internal class EnemyPackController {
         private EnemyManager enemyManager;
@@ -13,6 +13,8 @@ namespace Space.Game {
 
         public int enemyPerRow;
 
+        public event Action onEnemyDepleted;
+
         public EnemyPackController() {
             enemies = new List<Enemy>();
         }
@@ -20,6 +22,8 @@ namespace Space.Game {
         public void Init(EnemyManager _enemyManager, GameManager _gameManager) {
             enemyManager = _enemyManager;
             gameManager = _gameManager;
+
+            onEnemyDepleted += gameManager.Win;
         }
 
         public void GenerateEnemies(Transform _anchor) {
@@ -36,6 +40,7 @@ namespace Space.Game {
                         e.SetEnemyData(enemyData);
                         e.onDead += RemoveEnemyFromList;
                         e.onDead += GetScore;
+
                         enemies.Add(e);
                     }
                     rowAnchor.y -= 1;
@@ -54,6 +59,10 @@ namespace Space.Game {
         internal void RemoveEnemyFromList(Entity _e) {
             //Debug.Log("enemy removed");
             enemies.Remove((Enemy)_e);
+
+            if (enemies.Count == 0) {
+                onEnemyDepleted?.Invoke();
+            }
         }
 
         public void MovePack(Vector3 _direction) {

@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Space;
+using SpaceInvader;
 
-namespace Space.Menu {
+namespace SpaceInvader.Menu {
     public class ScoreTableUI : BaseMenu {
         public Transform grid;
         public GameObject rowScoreData;
