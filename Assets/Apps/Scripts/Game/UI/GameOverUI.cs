@@ -12,17 +12,12 @@ namespace SpaceInvader.Game.UI {
 
 
         private void Start() {
+            gameManager.OnGameOver += Show;
 
+            buttonRetry.onClick.AddListener(gameManager.Retry);
+            buttonQuit.onClick.AddListener(gameManager.Quit);
 
             Hide();
-        }
-
-        internal void SetRetryButton(Action retry) {
-            buttonRetry.onClick.AddListener(retry.Invoke);
-        }
-
-        internal void SetQuitButton(Action quit) {
-            buttonQuit.onClick.AddListener(quit.Invoke);
         }
     }
 }

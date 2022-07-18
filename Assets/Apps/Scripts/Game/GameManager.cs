@@ -7,11 +7,11 @@ using SpaceInvader;
 
 namespace SpaceInvader.Game {
     public class GameManager : MonoBehaviour, IManager {
-        private DataManager dataManager;
+        private DataController dataManager;
 
-        public event Action onGameManagerStart;
-        public event Action<Life> onLifeReduced;
-        public event Action onGameOver;
+        public event Action OnGameManagerStart;
+        public event Action<Life> OnLifeReduced;
+        public event Action OnGameOver;
 
         public GameObject playerPrefab;
         public Player player;
@@ -23,7 +23,7 @@ namespace SpaceInvader.Game {
 
 
         private void Awake() {
-            dataManager = FindObjectOfType<DataManager>();
+            dataManager = FindObjectOfType<DataController>();
 
             score = new Score(this);
             life = new Life(3);
@@ -34,19 +34,19 @@ namespace SpaceInvader.Game {
         }
 
         private void Start() {
-            onGameManagerStart?.Invoke();
+            OnGameManagerStart?.Invoke();
         }
 
         private void OnEnable() {
-            onGameManagerStart += StartGame;
-            dataManager.onDataLoaded += score.SetHighscore;
-            onGameOver += SaveHighscore;
+            OnGameManagerStart += StartGame;
+            dataManager.OnDataLoaded += score.SetHighscore;
+            OnGameOver += SaveHighscore;
         }
 
         private void OnDisable() {
-            onGameManagerStart -= StartGame;
-            dataManager.onDataLoaded -= score.SetHighscore;
-            onGameOver += SaveHighscore;
+            OnGameManagerStart -= StartGame;
+            dataManager.OnDataLoaded -= score.SetHighscore;
+            OnGameOver += SaveHighscore;
         }
 
         private void SaveHighscore() {
@@ -85,7 +85,7 @@ namespace SpaceInvader.Game {
         public void ReduceLife (Entity _entity) {
             life.Reduce(1);
 
-            onLifeReduced?.Invoke(life);
+            OnLifeReduced?.Invoke(life);
 
             if (!life.HasLife()) {
                 GameOver();
@@ -93,7 +93,7 @@ namespace SpaceInvader.Game {
         }
 
         private void GameOver() {
-            onGameOver?.Invoke();
+            OnGameOver?.Invoke();
         }
 
         public void Retry() {

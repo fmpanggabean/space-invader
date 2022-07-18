@@ -6,11 +6,11 @@ using System.IO;
 using System;
 
 namespace SpaceInvader {
-    public class DataManager : MonoBehaviour, IManager {
+    public class DataController : MonoBehaviour, IManager {
         public GameData data;
         private string path;
 
-        public event Action<GameData> onDataLoaded;
+        public event Action<GameData> OnDataLoaded;
 
         private void Awake() {
             path = Application.persistentDataPath + "/space-shooter.save";
@@ -39,7 +39,7 @@ namespace SpaceInvader {
                 data = (GameData)bf.Deserialize(file);
                 file.Close();
 
-                onDataLoaded?.Invoke(data);
+                OnDataLoaded?.Invoke(data);
 
                 Debug.Log("Data Loaded!");
                 Debug.Log("highscore: " + data.highscore);

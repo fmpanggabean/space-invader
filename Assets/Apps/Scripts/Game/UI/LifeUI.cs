@@ -10,7 +10,11 @@ namespace SpaceInvader.Game.UI {
         public List<Image> images;
 
 
-        public void ShowLife(int _life) {
+        private void Start() {
+            gameManager.OnLifeReduced += ShowLife;
+        }
+        public void ShowLife(Life life) {
+            int _life = life.value;
             lifeText.text = _life.ToString();
             
             for (int i=0; i<3; i++) {

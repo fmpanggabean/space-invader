@@ -30,7 +30,7 @@ namespace SpaceInvader.Game {
         }
 
         private void OnEnable() {
-            gameManager.onGameManagerStart += Init;
+            gameManager.OnGameManagerStart += Init;
         }
 
         private void Init() {

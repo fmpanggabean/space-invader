@@ -14,11 +14,11 @@ namespace SpaceInvader.Game {
             this.gameManager = gameManager;
         }
 
-        public event Action<int> onGainScore;
+        public event Action<int> OnGainScore;
 
         public void GainScore(int _score) {
             score1 += _score;
-            onGainScore?.Invoke(score1);
+            OnGainScore?.Invoke(score1);
         }
 
         internal void SetHighscore(int _highscore) {

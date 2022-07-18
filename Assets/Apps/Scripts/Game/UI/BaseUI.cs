@@ -4,7 +4,11 @@ using UnityEngine;
 
 namespace SpaceInvader.Game.UI {
     public abstract class BaseUI : MonoBehaviour {
-        
+        protected GameManager gameManager;
+
+        protected void Awake() {
+            gameManager = FindObjectOfType<GameManager>();
+        }
         public void Hide() {
             gameObject.SetActive(false);
         }

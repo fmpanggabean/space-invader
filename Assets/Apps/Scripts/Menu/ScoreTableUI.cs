@@ -8,6 +8,11 @@ namespace SpaceInvader.Menu {
         public Transform grid;
         public GameObject rowScoreData;
 
+        public List<EnemyData> enemies;
+
+        private void Start() {
+            GenerateList(enemies);
+        }
         public void GenerateList(List<EnemyData> enemies) {
             foreach(EnemyData enemy in enemies) {
                 RowScoreDataUI rsd = Instantiate(rowScoreData, grid).GetComponent<RowScoreDataUI>();
