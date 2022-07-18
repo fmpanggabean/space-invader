@@ -4,12 +4,16 @@ using UnityEngine;
 using System;
 
 namespace SpaceInvader.Game {
+    public enum EntityType { 
+        Player, Enemy, Barrier
+    }
     public abstract class Entity : MonoBehaviour {
+        public abstract EntityType EntityType { get; }
         public Health health;
         //public int hp;
         public float speed;
         public Vector3 deltaPosition;
-        public List<Type> targets;
+        public List<EntityType> targets;
 
         public event Action<int> onDamaged;
         public event Action<Entity> onDead;

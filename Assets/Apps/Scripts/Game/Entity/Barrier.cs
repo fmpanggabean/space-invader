@@ -5,10 +5,10 @@ using System;
 
 namespace SpaceInvader.Game {
     public class Barrier : Entity {
-
+        public override EntityType EntityType => EntityType.Barrier;
 
         private void Awake() {
-            targets = new List<Type>();
+            targets = new List<EntityType>();
         }
         private void Start() {
             health.value = 3;

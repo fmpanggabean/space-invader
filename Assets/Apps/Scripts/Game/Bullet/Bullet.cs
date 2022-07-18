@@ -11,7 +11,9 @@ namespace SpaceInvader.Game {
 
         private float maxTravelDistance;
         private float travelDistance;
-        private List<Type> targetTypes;
+        private List<EntityType> targetTypes;
+
+        public override EntityType EntityType { get; }
 
         private void Awake() {
             movement = GetComponent<Movement>();
@@ -27,15 +29,15 @@ namespace SpaceInvader.Game {
 
         private void OnTriggerEnter2D(Collider2D collision) {
             Entity collidedObject = collision.GetComponent<Entity>();
-
-            if (IsTypeInTargetList(collidedObject.GetType())) {
+            
+            if (IsTypeInTargetList(collidedObject.EntityType)) {
                 collidedObject.Damaged(damage);
                 Hide();
             }
         }
 
-        private bool IsTypeInTargetList(Type _type) {
-            if (targetTypes.Contains(_type)) {
+        private bool IsTypeInTargetList(EntityType entityType) {
+            if (targetTypes.Contains(entityType)) {
                 return true;
             }
             return false;

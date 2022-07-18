@@ -7,13 +7,16 @@ namespace SpaceInvader.Game {
     
     public class Player : Entity {
         private Vector3 inputDirection;
+
+        public override EntityType EntityType => EntityType.Player;
+
         //private GameManager gameManager;
 
         private void Awake() {
             inputDirection = new Vector3();
-            targets = new List<Type>();
+            targets = new List<EntityType>();
 
-            targets.Add(typeof(Enemy));
+            targets.Add(EntityType.Enemy);
         }
 
         private void Update() {

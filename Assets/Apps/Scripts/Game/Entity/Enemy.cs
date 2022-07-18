@@ -5,13 +5,14 @@ using UnityEngine;
 
 namespace SpaceInvader.Game {
     public class Enemy : Entity {
+        public override EntityType EntityType => EntityType.Enemy;
         private EnemyData enemyData;
 
 
         private void Awake() {
-            targets = new List<Type>();
-            targets.Add(typeof(Player));
-            targets.Add(typeof(Barrier));
+            targets = new List<EntityType>();
+            targets.Add(EntityType.Player);
+            targets.Add(EntityType.Barrier);
         }
         private void OnEnable() {
             onDead += Destroy;
